@@ -5,22 +5,22 @@ This library supports BMP, PNM (PPM/PGM/PBM), XPM, LBM, PCX, GIF, JPEG, PNG,
 TGA, and TIFF formats.
 
 Runtime requirements:
-  cygwin-1.7.0-45
-  libgcc1-4.3.2-2
-  libjpeg62-6b-12
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libjpeg7-7-10
   libpng12-1.2.35-10
-  libSDL1.2_0-1.2.13-10
-  libtiff5-3.8.2-10
+  libSDL1.2_0-1.2.14-1
+  libtiff5-3.8.2-11
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.63-10
-  automake1.9-1.9.6-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  libtool-2.2.7a-12
+  automake1.11-1.11-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  libtool-2.2.7a-14
   make-3.81-2
   sed-4.1.5-2
 
@@ -33,36 +33,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack SDL_image-1.2.7-X-src.tar.bz2
+  unpack SDL_image-1.2.10-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./SDL_image-1.2.7-X.cygport all
+  cygport ./SDL_image-1.2.10-X.cygport all
 
 This will create:
-  /usr/src/SDL_image-1.2.7-X-src.tar.bz2
-  /usr/src/libSDL_image-devel-1.2.7-X.tar.bz2
-  /usr/src/libSDL_image1.2_0-1.2.7-X.tar.bz2
+  /usr/src/SDL_image-1.2.10-X-src.tar.bz2
+  /usr/src/libSDL_image-devel-1.2.10-X.tar.bz2
+  /usr/src/libSDL_image1.2_0-1.2.10-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(libSDL_image1.2_0)
-  /usr/bin/cygSDL_image-1-2-0.dll
-  /usr/share/doc/SDL_image/Changes
-  /usr/share/doc/SDL_image/COPYING
-  /usr/share/doc/SDL_image/README
-
-(libSDL_image-devel)
-  /usr/include/SDL/SDL_image.h
-  /usr/lib/libSDL_image.a
-  /usr/lib/libSDL_image.dll.a
-  /usr/lib/libSDL_image.la
-
-------------------
-
 Port Notes:
+
+----- version 1.2.10-1 -----
+Version bump.
 
 ----- version 1.2.7-10 -----
 Initial release for Cygwin 1.7.

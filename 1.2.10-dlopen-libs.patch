@@ -1,6 +1,9 @@
---- origsrc/SDL_image-1.2.7/configure.in	2008-05-10 19:08:27.000000000 -0500
-+++ src/SDL_image-1.2.7/configure.in	2008-12-22 02:51:30.006125000 -0600
-@@ -61,7 +61,7 @@
+FIXME: if multiple versions of a DLL are installed, make sure the latest
+is picked up.
+
+--- origsrc/SDL_image-1.2.10/configure.in	2009-11-12 00:41:21.000000000 -0600
++++ src/SDL_image-1.2.10/configure.in	2009-11-17 01:41:15.633382900 -0600
+@@ -61,7 +61,7 @@ case "$host" in
      *-*-beos*)
          ac_default_prefix=/boot/develop/tools/gnupro
          ;;
@@ -9,18 +12,26 @@
          if test "$build" != "$host"; then # cross-compiling
              # Default cross-compile location
              ac_default_prefix=/usr/local/cross-tools/i386-mingw32
-@@ -125,7 +125,7 @@
+@@ -94,6 +94,7 @@ dnl Function to find a library in the co
+ find_lib()
+ {
      gcc_bin_path=[`$CC -print-search-dirs 2>/dev/null | fgrep programs: | sed 's/[^=]*=\(.*\)/\1/' | sed 's/:/ /g'`]
++    env_bin_path=[`echo $PATH | sed 's/:/ /g'`]
      gcc_lib_path=[`$CC -print-search-dirs 2>/dev/null | fgrep libraries: | sed 's/[^=]*=\(.*\)/\1/' | sed 's/:/ /g'`]
-     env_lib_path=[`echo $LIBS $LDFLAGS | sed 's/-L[ ]*//g'`]
--    for path in $gcc_bin_path $gcc_lib_path $env_lib_path /usr/lib /usr/local/lib; do
-+    for path in $gcc_bin_path /usr/bin $gcc_lib_path $env_lib_path /usr/lib /usr/local/lib; do
-         lib=[`ls -- $path/$1 2>/dev/null | sort -r | sed 's/.*\/\(.*\)/\1/; q'`]
+     env_lib_path=[`echo $LIBS $LDFLAGS $* | sed 's/-L[ ]*//g'`]
+     if test "$cross_compiling" = yes; then
+@@ -101,7 +102,7 @@ find_lib()
+     else
+         host_lib_path="/usr/$base_libdir /usr/local/$base_libdir"
+     fi
+-    for path in $gcc_bin_path $gcc_lib_path $env_lib_path $host_lib_path; do
++    for path in $gcc_bin_path $env_bin_path $gcc_lib_path $env_lib_path $host_lib_path; do
+         lib=[`ls -- $path/$1 2>/dev/null | sort | sed 's/.*\/\(.*\)/\1/; q'`]
          if test x$lib != x; then
              echo $lib
-@@ -147,7 +147,10 @@
+@@ -166,7 +167,10 @@ if test x$enable_jpg = xyes || test x$en
              *-*-darwin*)
-                 jpg_lib=[`find_lib libjpeg*.dylib`]
+                 jpg_lib=[`find_lib libjpeg.dylib`]
                  ;;
 -            *-*-cygwin* | *-*-mingw32*)
 +            *-*-cygwin*)
@@ -30,9 +41,9 @@
                  jpg_lib=[`find_lib "jpeg.dll"`]
                  ;;
              *)
-@@ -176,7 +179,10 @@
+@@ -201,7 +205,10 @@ if test "x$enable_png" = xyes; then
              *-*-darwin*)
-                 png_lib=[`find_lib libpng*.dylib`]
+                 png_lib=[`find_lib libpng.dylib`]
                  ;;
 -            *-*-cygwin* | *-*-mingw32*)
 +            *-*-cygwin*)
@@ -42,9 +53,9 @@
                  png_lib=[`find_lib "libpng*.dll"`]
                  ;;
              *)
-@@ -202,7 +208,10 @@
+@@ -233,7 +240,10 @@ if test x$enable_tif = xyes; then
              *-*-darwin*)
-                 tif_lib=[`find_lib libtiff*.dylib`]
+                 tif_lib=[`find_lib libtiff.dylib`]
                  ;;
 -            *-*-cygwin* | *-*-mingw32*)
 +            *-*-cygwin*)

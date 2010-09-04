@@ -5,24 +5,23 @@ This library supports BMP, PNM (PPM/PGM/PBM), XPM, LBM, PCX, GIF, JPEG, PNG,
 TGA, and TIFF formats.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libgcc1-4.3.4-1
-  libjpeg7-7-10
-  libpng12-1.2.35-10
+  cygwin-1.7.7-1
+  libjpeg8-8b-1
+  libpng14-1.4.3-2
   libSDL1.2_0-1.2.14-1
-  libtiff5-3.8.2-11
+  libtiff5-3.9.2-1
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-10
-  automake1.11-1.11-10
-  binutils-2.19.51-1
-  cygport-0.9.10-1
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
+  binutils-2.20.51-2
+  cygport-0.10.0-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
-  libtool-2.2.7a-14
+  gcc4-core-4.5.1-1
+  libtool-2.2.7a-15
   make-3.81-2
-  sed-4.1.5-2
+  sed-4.2.1-1
 
 Canonical website:
   http://www.libsdl.org/projects/SDL_image/
@@ -47,6 +46,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.2.10-2 -----
+Rebuilt for jpeg-8 and libpng14.
 
 ----- version 1.2.10-1 -----
 Version bump.

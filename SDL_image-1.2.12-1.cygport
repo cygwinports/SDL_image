@@ -2,9 +2,11 @@ DESCRIPTION="Simple DirectMedia Layer library"
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/"
 SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
 
-PKG_NAMES="${PN} lib${PN}1.2_0 lib${PN}-devel"
+PKG_NAMES="lib${PN}1.2_0 lib${PN}-devel"
 libSDL_image1_2_0_CONTENTS='usr/bin/*-1-2-0.dll usr/share/doc/'
 libSDL_image_devel_CONTENTS='usr/include/ usr/lib/'
 
 NO_AUTOHEADER=1
-CYGCONF_ARGS="--disable-jpg-shared --disable-png-shared --disable-tif-shared"
+CYGCONF_ARGS="--disable-jpg-shared --disable-png-shared --disable-tif-shared --disable-webp-shared"
+
+KEEP_LA_FILES="none"

@@ -1,4 +1,8 @@
-DESCRIPTION="Simple DirectMedia Layer library"
+CATEGORY="X11"
+SUMMARY="SDL image loading library"
+DESCRIPTION="This is a simple library to load images of various formats as
+SDL surfaces.  This library supports BMP, PNM (PPM/PGM/PBM), XPM, LBM,
+PCX, GIF, JPEG, PNG, TGA, TIFF, and WEBP formats."
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/"
 SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
 

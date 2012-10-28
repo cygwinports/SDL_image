@@ -27,7 +27,7 @@
                  ;;
 -            *-*-cygwin* | *-*-mingw32*)
 +            *-*-cygwin*)
-+                png_lib="cygpng14-14.dll"
++                png_lib="cygpng15-15.dll"
 +                ;;
 +            *-*-mingw32*)
                  png_lib=[`find_lib "libpng*.dll"`]

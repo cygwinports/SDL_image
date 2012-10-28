@@ -1,3 +1,6 @@
+NAME="SDL_image"
+VERSION=1.2.12
+RELEASE=3
 CATEGORY="X11"
 SUMMARY="SDL image loading library"
 DESCRIPTION="This is a simple library to load images of various formats as

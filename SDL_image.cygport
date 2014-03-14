@@ -1,15 +1,15 @@
 NAME="SDL_image"
 VERSION=1.2.12
-RELEASE=3
-CATEGORY="X11"
+RELEASE=4
+CATEGORY="Libs"
 SUMMARY="SDL image loading library"
 DESCRIPTION="This is a simple library to load images of various formats as
 SDL surfaces.  This library supports BMP, PNM (PPM/PGM/PBM), XPM, LBM,
 PCX, GIF, JPEG, PNG, TGA, TIFF, and WEBP formats."
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/"
-SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/release/${NAME}-${VERSION}.tar.gz"
 
-PKG_NAMES="lib${PN}1.2_0 lib${PN}-devel"
+PKG_NAMES="lib${NAME}1.2_0 lib${NAME}-devel"
 libSDL_image1_2_0_CONTENTS='usr/bin/*-1-2-0.dll usr/share/doc/'
 libSDL_image_devel_CONTENTS='usr/include/ usr/lib/'
 

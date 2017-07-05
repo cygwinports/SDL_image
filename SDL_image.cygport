@@ -1,6 +1,6 @@
 NAME="SDL_image"
 VERSION=1.2.12
-RELEASE=5
+RELEASE=6
 CATEGORY="Libs"
 SUMMARY="SDL image loading library"
 DESCRIPTION="This is a simple library to load images of various formats as
@@ -15,5 +15,3 @@ libSDL_image_devel_CONTENTS='usr/include/ usr/lib/'
 
 NO_AUTOHEADER=1
 CYGCONF_ARGS="--disable-jpg-shared --disable-png-shared --disable-tif-shared --disable-webp-shared"
-
-KEEP_LA_FILES="none"
